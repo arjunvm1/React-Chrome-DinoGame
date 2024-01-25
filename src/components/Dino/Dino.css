@@ -1,0 +1,85 @@
+.game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 225px;
+  border: 1px solid black;
+  margin: auto;
+}
+
+#dino {
+  width: 50px;
+  height: 50px;
+  background-image: url(img/trex.png);
+  background-size: 50px 50px;
+  position: relative;
+  top: 150px;
+}
+
+.jump {
+  animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+
+  30% {
+    top: 130px;
+  }
+
+  50% {
+    top: 80px;
+  }
+
+  80% {
+    top: 130px;
+  }
+
+  100% {
+    top: 150px;
+  }
+}
+
+#cactus {
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 110px;
+  left: 580px;
+  background-image: url("img/cactus.png");
+  background-size: 20px 40px;
+  animation: block 1.5s infinite linear;
+}
+
+@keyframes block {
+  0% {
+    left: 560px;
+  }
+
+  100% {
+    left: -5px;
+  }
+}
+
+/* Media queries for smaller screens (phones) */
+@media only screen and (max-width: 600px) {
+  .game {
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Adjust max-width as needed */
+    max-height: 150px; /* Adjust max-height as needed */
+  }
+
+  #dino {
+    top: 80px;
+  }
+
+  #cactus {
+    top: 60px;
+    left: 80%;
+  }
+}
